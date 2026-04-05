@@ -49,5 +49,5 @@ class AlbumUpdate(SQLModel):
 class AlbumPublicWithArtist(AlbumBase):
     artist: Optional[ArtistPublic] = None
 
-class ArtistPublicWithAlbums(ArtistBase):
-    album: list[AlbumPublic] = []
+class ArtistPublicWithAlbums(ArtistPublic):
+    albums: list[AlbumPublic] = []
